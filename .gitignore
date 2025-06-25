@@ -1,0 +1,17 @@
+# Python bytecode and compiled files
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+
+# Virtual environments
+venv/
+.venv/
+ENV/
+env/
+
+# Secret files and configs
+.env
+*.env
+app/config.py  # If you're putting secrets directly here

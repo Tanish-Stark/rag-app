@@ -1,0 +1,16 @@
+# app/config.py
+import os
+from dotenv import load_dotenv
+
+# OpenAI key (keep this secret in production!)
+OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
+# Website to scrape
+TARGET_URL = "https://woocommercegst.co.in/"
+
+# Model name
+EMBED_MODEL = "text-embedding-3-small"
+CHAT_MODEL = "gpt-4"
+
+
+load_dotenv()  # This loads environment variables from .env
+
