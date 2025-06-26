@@ -13,7 +13,8 @@ client = OpenAI(api_key=OPENAI_API_KEY)
 def scrape_site(url):
     response = requests.get(url)
     soup = BeautifulSoup(response.text, 'html.parser')
-    texts = [tag.get_text(strip=True) for tag in soup.find_all(['p', 'h1', 'h2', 'h3', 'li', 'strong'])]
+    texts = [tag.get_text(strip=True) for tag in soup.find_all(['p', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6',
+'li', 'strong', 'span', 'div', 'a', 'em', 'b', 'blockquote'])]
     return "\n".join(texts)
 
 def chunk_text(text, chunk_size=500, overlap=50):
