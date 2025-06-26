@@ -43,7 +43,11 @@ def get_relevant_chunks(query, index, chunks, top_k=3):
     return [chunks[i] for i in I[0]]
 
 def chat_with_context(query, relevant_chunks):
-    prompt = f"Answer using the info:\n\n{''.join(relevant_chunks)}\n\nQ: {query}"
+    prompt = (
+        "Answer the following question. If the provided info contains the answer, use it. "
+        "If the info is insufficient, answer based on your general knowledge.\n\n"
+        f"Info:\n{''.join(relevant_chunks)}\n\nQ: {query}"
+    )
     response = client.chat.completions.create(
         model=CHAT_MODEL,
         messages=[{"role": "user", "content": prompt}]

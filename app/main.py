@@ -31,7 +31,7 @@ async def ask_question(request: Request):
     fallback_queries = {
         "hi", "hello", "ok", "okay", "hey", "thanks", "thank you", "yo", "sup", "hola", "hii", "hiii", "test",
         "yo!", "hey!", "hi!", "hello!", "ok!", "okay!", "sup?", "hey there", "greetings", "good morning", "good evening", "good afternoon",
-        "nice", "cool", "fine", "awesome", "great", "good", "hru", "how are you", "what's up", "wassup", "yo yo", "hlo", "hlo!", "hlo there"
+        "nice", 'heyy',"cool", "fine", "awesome", "great", "good", "hru", "how are you", "what's up", "wassup", "yo yo", "hlo", "hlo!", "hlo there"
     }
     fallback_responses = [
         "Hello! How can I help you today?",
