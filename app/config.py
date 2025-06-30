@@ -9,7 +9,7 @@ TARGET_URL = "https://woocommercegst.co.in/"
 
 # Model name
 EMBED_MODEL = "text-embedding-3-small"
-CHAT_MODEL = "gpt-4"
+CHAT_MODEL = "gpt-4o-mini"
 
 
 load_dotenv()  # This loads environment variables from .env

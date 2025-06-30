@@ -17,8 +17,12 @@ app.add_middleware(
 
 # Cache chunks and vector index at startup
 print("🔄 Scraping and preparing vector store...")
-raw_text = scrape_site(TARGET_URL)
+with open("raw_text.txt", "r", encoding="utf-8") as f:
+    raw_text = f.read()
 chunks = chunk_text(raw_text)
+print(f"🔹 Scraped chunks: {len(chunks)}")
+
+
 vector_index, chunk_store = build_vector_store(chunks)
 print("✅ Vector store ready!")
 
