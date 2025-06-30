@@ -15,4 +15,13 @@ services:
       interval: 30s
       timeout: 10s
       retries: 3
-      start_period: 40s 
+      start_period: 40s
+  fastapi-app:
+    build: .
+    ports:
+      - "8001:8001"
+    env_file:
+      - .env
+    volumes:
+      - ./raw_text.txt:/app/raw_text.txt
+    restart: unless-stopped 
