@@ -125,10 +125,17 @@ Get a flexible pricing option with WooCommerce GST Plugin
 Get a flexible pricing option with WooCommerce GST Plugin
 Get a flexible pricing option with WooCommerce GST Plugin
 Get a flexible pricing option with WooCommerce GST Plugin
-FeaturesWooGST PluginWooGST ProPricingFree Foreverâ¹4999/-ValidityLifetimeLifetimeUpdateLifetime Free UpdateTicket Support1 Year Free Ticket SupportAdmin can configure GST settings.Add their GSTIN code and which will be shown on the invoice.Meta field for âCan choose required tax slabs.Generates tax slabs with CGST, SGST and IGST.Able to generate PDF invoices for the orderAllow you to add HSN code for the productCustomize the invoice with your store logo, name, address etc.DownloadBuy now
+FeaturesWooGST PluginWooGST Pro 4999/-
+PricingFree ForeveralidityLifetimeLifetimeUpdateLifetime Free UpdateTicket Support1 Year Free Ticket SupportAdmin can configure GST settings.Add their GSTIN code and which will be shown on the invoice.Meta field for âCan choose required tax slabs.Generates tax slabs with CGST, SGST and IGST.Able to generate PDF invoices for the orderAllow you to add HSN code for the productCustomize the invoice with your store logo, name, address etc.DownloadBuy now
 FeaturesWooGST PluginWooGST Pro
 Features
 Features
+
+
+contact 
+email: info@woocommercegst.co.in
+phone_no : 9607346676
+
 Features
 WooGST Plugin
 WooGST Plugin
@@ -139,14 +146,14 @@ WooGST Pro
 PricingFree Foreverâ¹4999/-
 Pricing
 Pricing
+Paid plan pricing is ₹4999/-
 Pricing
 Pricing
+free plan is Free Forever
 Free Forever
 Free Forever
-Free Forever
-â¹4999/-
-â¹4999/-
-â¹4999/-
+Paid plan pricing is ₹4999/-
+
 ValidityLifetimeLifetime
 Validity
 Validity
@@ -448,6 +455,35 @@ Privacy PolicyTerms and Conditions
 Privacy PolicyTerms and Conditions
 Privacy Policy
 Privacy Policy
+
+Using WooCommerce GST Plugin, you are able to manage the GST tax for your store. You can specify the GSTIN number on GST settings tab in WooCommerce setting. You can also choose your site content single or multiple type product and according that you can choose tax slabs. Plugin also provide 'HSN Code' meta field for product unique code in general setting of product. 
+
+A few features:
+
+* Admin can configure GST settings.
+* Admin can enter their GSTIN code and that will be shown on invoice.
+* Meta field for 'HSN Code'.
+* Admin can choose required tax slabs.
+* Generates tax slabs with CGST, SGST and IGST automatically.
+* Dynamic tax slabs (**PRO**).
+* PDF invoice with GSTIN and HSN Number (**PRO**).
+* Capture customer GSTIN Number during checkout (**PRO**).
+
+<a href="https://www.woocommercegst.co.in" target="_blank"><strong>Checkout our PRO plugin</strong></a>
+
+== Installation ==
+
+1. Upload `woocommerce-gst-plugin` zip to the `/wp-content/plugins/` directory
+2. Activate the plugin through the 'Plugins' menu in WordPress
+3. Configure WooCommerce -> GST Settings
+
+
+== Frequently asked questions ==
+
+= How do I remove tax slab? =
+1. Click on GST settings Tab in WooCommerce setting.
+2. Remove unwanted tax slab from 'Select Multiple Tax Slabs'.
+
 Terms and Conditions
 Terms and Conditions
 All Rights Reserved. Â© 2025
@@ -488,6 +524,15 @@ Q: Is WooCommerce GST plugin compatible with High-Performance Order Storage (HPO
 A: Yes, by adding specific compatibility code in the `woocommerce-gst-addon.php` file.
 
 ## User Support Q&A
+
+Q: what is the price?
+A: paid plan costs rupees 4999 and validity is lifetime 
+
+Q: Contact details/ who do i contact?
+A: You can contact support on 
+    info@woocommercegst.co.in
+    9607346676
+
 
 Q: HI Any update on this?
 A: Hi In our plugin, we donâ€™t have an option for that, but you can do by default woocommerce import for HSN code in bulk. Please find attached sample CSV for example.

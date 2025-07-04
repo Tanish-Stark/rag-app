@@ -7,10 +7,14 @@ import faiss
 import json
 from sentence_transformers import SentenceTransformer
 from openai import OpenAI
-from app.config import OPENAI_API_KEY, TARGET_URL, CHAT_MODEL
+from app.config import OPENAI_API_KEY, TARGET_URL, CHAT_MODEL, HELICONE_API_KEY
 
 # 🔹 GPT Client (for answering)
-client = OpenAI(api_key=OPENAI_API_KEY)
+client = OpenAI(
+    api_key=OPENAI_API_KEY,
+    base_url="https://oai.helicone.ai/v1",
+    default_headers={"Helicone-Auth": f"Bearer sk-helicone-wvtrzoy-2v5esza-qhp3lky-v5ipnhy" }
+)
 
 # 🔹 Local embedding model (fast + free)
 embedding_model = SentenceTransformer("all-MiniLM-L6-v2")
