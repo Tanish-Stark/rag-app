@@ -31,11 +31,15 @@ def categorize_query(query):
     """Categorize the query into different types for appropriate fallback responses."""
     query_lower = query.lower().strip()
     
-    # Pricing-related queries
+    # Pricing-related queries (refined to only match direct price/cost queries)
     pricing_patterns = [
-        r'\b(pricing|price|cost|charges?|plans?|subscription|how much|fee|rate|payment|pay|buy|purchase)\b',
-        r'\b(what.*price|what.*cost|what.*plan|how much.*cost|how much.*price)\b',
-        r'\b(is it free|free plan|pro plan|premium plan)\b'
+        r'\b(price|cost|fee|rate|charges?)\b',
+        r'how much( does it)? (cost|is it|do i pay|to buy|to purchase)',
+        r'what( is|\'s)? the (price|cost|fee|rate)',
+        r'price of( the)? (pro|premium)? ?plan',
+        r'cost of( the)? (pro|premium)? ?plan',
+        r'how much for( the)? (pro|premium)? ?plan',
+        r'how much do(es)? (the )?(pro|premium)? ?plan cost',
     ]
     for pattern in pricing_patterns:
         if re.search(pattern, query_lower):
@@ -71,6 +75,16 @@ def categorize_query(query):
         r'\b(test|testing|ping|pong)\b'
     ]
     
+    # Creator-related queries
+    creator_patterns = [
+        r'who (is|\'s)? (the )?(creator|author|developer|builder|maker|founder) (of (this )?(plugin|app|application|software|project|tool)|of woocommercegst|woocommercegst)?\??',
+        r'who (made|built|created|developed) (this )?(plugin|app|application|software|project|tool|woocommercegst)\??',
+        r'who is behind (this )?(plugin|app|application|software|project|tool|woocommercegst)\??',
+        r'creator of (this )?(plugin|app|application|software|project|tool|woocommercegst)\??',
+        r'author of (this )?(plugin|app|application|software|project|tool|woocommercegst)\??',
+        r'developer of (this )?(plugin|app|application|software|project|tool|woocommercegst)\??',
+    ]
+    
     # Check patterns
     for pattern in thanks_patterns:
         if re.search(pattern, query_lower):
@@ -91,6 +105,10 @@ def categorize_query(query):
     for pattern in test_patterns:
         if re.search(pattern, query_lower):
             return "test"
+    
+    for pattern in creator_patterns:
+        if re.search(pattern, query_lower):
+            return "creator"
     
     # Very short queries (1-3 characters)
     if len(query_lower) <= 3:
@@ -150,6 +168,11 @@ def get_fallback_response(query_type):
             "Hi! Could you please provide more details about what you're looking for?",
             "Hello! I'd be happy to help, but I need a bit more information.",
             "Hi there! What would you like to know more about?"
+        ],
+        "creator": [
+            "WoocommerceGST plugin is created by STARK DIGITAL INDIA. Learn more at https://www.starkdigital.net/",
+            "The creator of WoocommerceGST plugin is STARK DIGITAL INDIA. Visit https://www.starkdigital.net/ for more info.",
+            "WoocommerceGST was developed by STARK DIGITAL INDIA. Check out their website: https://www.starkdigital.net/"
         ]
     }
     
@@ -159,6 +182,7 @@ def get_fallback_response(query_type):
 async def ask_question(request: Request):
     data = await request.json()
     query = data.get("query", "").strip()
+
 
     # Categorize the query
     query_type = categorize_query(query)
