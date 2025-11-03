@@ -77,12 +77,12 @@ def categorize_query(query):
     
     # Creator-related queries
     creator_patterns = [
-        r'who (is|\'s)? (the )?(creator|author|developer|builder|maker|founder) (of (this )?(plugin|app|application|software|project|tool)|of woocommercegst|woocommercegst)?\??',
-        r'who (made|built|created|developed) (this )?(plugin|app|application|software|project|tool|woocommercegst)\??',
-        r'who is behind (this )?(plugin|app|application|software|project|tool|woocommercegst)\??',
-        r'creator of (this )?(plugin|app|application|software|project|tool|woocommercegst)\??',
-        r'author of (this )?(plugin|app|application|software|project|tool|woocommercegst)\??',
-        r'developer of (this )?(plugin|app|application|software|project|tool|woocommercegst)\??',
+        r'who (is|\'s)? (the )?(creator|author|developer|builder|maker|founder) (of (this )?(plugin|app|application|software|project|tool)|of gstforecom|gstforecom)?\??',
+        r'who (made|built|created|developed) (this )?(plugin|app|application|software|project|tool|gstforecom)\??',
+        r'who is behind (this )?(plugin|app|application|software|project|tool|gstforecom)\??',
+        r'creator of (this )?(plugin|app|application|software|project|tool|gstforecom)\??',
+        r'author of (this )?(plugin|app|application|software|project|tool|gstforecom)\??',
+        r'developer of (this )?(plugin|app|application|software|project|tool|gstforecom)\??',
     ]
     
     # Check patterns
@@ -170,9 +170,9 @@ def get_fallback_response(query_type):
             "Hi there! What would you like to know more about?"
         ],
         "creator": [
-            "WoocommerceGST plugin is created by STARK DIGITAL INDIA. Learn more at https://www.starkdigital.net/",
-            "The creator of WoocommerceGST plugin is STARK DIGITAL INDIA. Visit https://www.starkdigital.net/ for more info.",
-            "WoocommerceGST was developed by STARK DIGITAL INDIA. Check out their website: https://www.starkdigital.net/"
+            "GST Invoice Plugin for WooCommerce is created by STARK DIGITAL INDIA. Learn more at https://www.starkdigital.net/",
+            "The creator of GST Invoice Plugin for WooCommerce is STARK DIGITAL INDIA. Visit https://www.starkdigital.net/ for more info.",
+            "GST Invoice Plugin for WooCommerce was developed by STARK DIGITAL INDIA. Check out their website: https://www.starkdigital.net/"
         ]
     }
     

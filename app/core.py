@@ -60,7 +60,7 @@ def get_relevant_chunks(query, index, chunks, top_k=3):
 # ✅ Use GPT-4 to answer based on relevant chunks
 def chat_with_context(query, relevant_chunks):
     prompt = (
-         "You're an expert on WooCommerceGST plugin and their settings here is their website https://woocommercegst.co.in/ . Use the provided info below if it's relevant chunks. "
+         "You're an expert on GST Invoice Plugin for WooCommerce and their settings here is their website https://gstforecom.com . Use the provided info below if it's relevant chunks. "
         "If the answer isn't found, do your best to help using your general knowledge.\n\n"
         f"Info:\n{''.join(relevant_chunks)}\n\nQ: {query}"
     )
